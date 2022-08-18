@@ -1,0 +1,61 @@
+.main-menu
+    display flex
+    align-items center
+
+    @media(max-width: 980px)
+        max-width 360px
+        width 100%
+        height calc(100% - 106px)
+        flex-direction column
+        position fixed
+        top 106px
+        left 100%
+        background-color $dark-blue
+        transform translateX(0)
+        transition transform $transition-base
+
+        &.show
+            transform translateX(-100%)
+
+    @media(max-width: 980px)
+        height calc(100% - 40px)
+        top 40px
+
+
+    &__list
+        display inline-flex
+        align-items center 
+
+        @media(max-width: 980px)
+            width 100%
+            flex-direction column
+            align-items flex-start
+
+        &-link 
+            font-family $second-font
+            font-weight  500 
+            font-size  17px 
+            line-height  17px 
+            color $text-color-secondary
+            transition color 300ms
+
+        &-item
+            margin-left 60px 
+
+            @media(max-width: 980px)
+                margin 20px 0 0
+                padding 0 20px
+                width 100%
+                box-sizing border-box
+
+            &:first-child 
+                margin-left 0
+
+                @media(max-width: 980px)
+                    margin-top 0
+
+            &:hover
+                .main-menu__list-link 
+                    color $purple
+                
+            

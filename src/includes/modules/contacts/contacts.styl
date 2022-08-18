@@ -1,0 +1,92 @@
+.contacts 
+    padding-bottom 87px
+
+    @media(max-width  980px)
+        padding-bottom 40px
+
+    h2 
+        margin-bottom 18px 
+        line-height 45px
+        color $text-color-secondary
+        opacity 0
+        transform translateX(-100%)
+        transition opacity $transition-base, transform $transition-base
+
+        &.animation
+            opacity 1
+            transform translateX(0)
+
+    &__desc 
+        margin-bottom 86px
+        line-height  26px 
+        font-size  18px 
+        color $purple
+        opacity 0
+        transform translateX(-100%)
+        transition opacity $transition-base $transition-base, transform $transition-base $transition-base
+
+        &.animation
+            opacity 1
+            transform translateX(0)
+
+        @media(max-width  980px)
+            margin-bottom 40px
+
+
+    &__info
+        &-block
+            display flex
+            align-items flex-end
+            gap 28px
+            opacity 0 
+            transition opacity $transition-base $transition-base*2
+
+            &.animation
+                opacity 1 
+
+        &-item
+            margin-bottom 22px
+            line-height  17px  
+            font-size  14px 
+            font-weight  300 
+            color  $purple
+
+            &:last-child
+                margin-bottom 0
+
+            &-title
+                margin-bottom 10px
+
+            strong,
+            a 
+                font-family $second-font
+                line-height  25px  
+                font-size  22px 
+                color $text-color-secondary 
+                font-weight  700 
+                display block
+
+                @media(max-width  480px)
+                    font-size 16px
+
+
+
+    &__columns 
+        display flex
+        justify-content space-between
+
+        @media(max-width  980px)  
+            flex-direction column
+            align-items center
+
+    &__column
+        width 100%
+        max-width 670px
+        
+        &:first-child
+            width 100%
+            max-width 470px
+
+            @media(max-width  980px) 
+                margin-bottom 40px 
+                max-width 670px

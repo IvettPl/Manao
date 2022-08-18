@@ -1,0 +1,14 @@
+include data
+
+.services#services
+    .center 
+        h2.js-animate Услуги
+
+        .services__desc.js-animate Возьмем на себя комплексную поддержку сайта/портала
+
+        .services__list 
+            each item in servicesList
+                .services__item.js-animate
+                    .services__img
+                        img(src= item.imgUrl, alt= item.title) 
+                    .services__text= item.title

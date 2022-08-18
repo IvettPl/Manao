@@ -1,0 +1,51 @@
+.field
+    &__checkbox
+        position absolute
+        top 0
+        left 0
+        opacity 0
+        visibility hidden
+        appearance none
+
+        &:checked ~ label
+            &:after
+                opacity 1
+
+        &-box
+            margin-top 18px
+            width 100%
+            position relative
+
+.label
+    &__checkbox
+        padding-left 36px
+        width 100%
+        line-height 18px
+        font-size 15px
+        color $text-color-secondary
+        font-weight 300
+        position relative
+        box-sizing border-box
+        cursor pointer
+
+        &:before
+            content: ''
+            width 22px
+            height 22px
+            position absolute
+            top -2px
+            left 0
+            border 2px solid $dark-purple
+            border-radius 4px
+            box-sizing border-box
+
+        &:after
+            content ''
+            width 14px
+            height 10px
+            position absolute
+            top 5px
+            left 4px
+            opacity 0
+            background url('./../img/icn-checked.svg') no-repeat center
+            transition opacity $transition-base

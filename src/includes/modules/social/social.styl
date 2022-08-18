@@ -1,0 +1,39 @@
+.social
+    display  inline-flex 
+    flex-direction  column 
+    transform  rotate(-180deg) 
+
+    &__item  
+        margin-bottom 13px
+        padding-top 16px
+        writing-mode vertical-rl
+        position relative
+        box-sizing border-box
+
+        &:hover
+            a  
+                color $purple
+
+        &:before
+            content ''
+            position absolute
+            top  0
+            right 10px
+            width 3px
+            height 3px
+            background-color $white
+            border-radius 50% 
+
+        &:first-child 
+            padding-top 0
+
+            &:before
+                display none
+
+        a 
+            font-family $second-font
+            line-height  18px  
+            font-size  16px 
+            color $text-color-secondary 
+            font-weight  600 
+            display block

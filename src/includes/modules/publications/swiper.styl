@@ -1,0 +1,51 @@
+.publications               
+    .swiper 
+        padding 0 28px
+        box-sizing border-box
+
+    .swiper-button-next, 
+    .swiper-button-prev            
+        width 49px 
+        height 49px 
+        background-color $white
+        border-radius 50% 
+        box-shadow 0px 4px 8px rgba(0, 0, 0, 0.1) 
+
+        &:hover 
+
+            &:before
+                background-color $violet
+            &:after
+                border-right 2px solid  $violet
+                border-bottom 2px solid  $violet
+
+        &:before,
+        &:after
+            content ''
+            position  absolute  
+            top 50%
+            left 50%
+
+        &:after 
+            font-size 0
+            width 10px
+            height 10px
+            border-right 2px solid  $grey2
+            border-bottom 2px solid  $grey2
+            transition border $transition-base
+            transform translate(-50%, -50%) rotate(-45deg)
+
+        &:before 
+            width 16px
+            height 2px
+            background-color $grey2
+            transition background $transition-base
+            transform translate(-50%, -50%)
+
+    .swiper-button-next
+        &:after
+            transform translate(-50%, -50%) rotate(-45deg)
+
+    .swiper-button-prev 
+        &:after
+            transform translate(-50%, -50%) rotate(135deg)

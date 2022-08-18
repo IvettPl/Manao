@@ -1,0 +1,72 @@
+.services
+    padding 115px 0
+    background-color $purple-light
+    
+    @media(max-width: 960px)
+        padding 40px 0
+
+    h2 
+        margin-bottom 14px
+        text-align center        
+        opacity 0
+        transform translateX(-100%)
+        transition opacity $transition-base, transform $transition-base
+
+        &.animation
+            opacity 1
+            transform translateX(0)
+
+    &__desc 
+        margin-bottom 44px
+        line-height  24px 
+        font-size  18px 
+        color $grey
+        text-align center
+        opacity 0
+        transform translateX(100%)
+        transition opacity $transition-base, transform $transition-base
+
+        &.animation
+            opacity 1
+            transform translateX(0)
+
+    img 
+        width auto
+
+    &__list 
+        display grid
+        grid-template-columns repeat( auto-fit, minmax(270px, 1fr) )
+        grid-gap 30px
+
+        @media(max-width: 660px)
+            grid-template-columns 270px
+            justify-content center
+
+    &__item
+        padding 27px 29px
+        height 120px
+        display flex
+        justify-content center
+        align-items center
+        background-color $white
+        border-radius 9px
+        box-sizing border-box
+        opacity 0
+        transform translateY(50%)
+        transition opacity $transition-base, transform $transition-base
+
+        &.animation
+            opacity 1
+            transform translateY(0)
+
+    &__img
+        margin-right 15px
+        width 66px
+        height 66px
+        display flex
+        justify-content center
+        align-items center
+        flex-shrink 0
+        background linear-gradient(105.96deg, #3F0F72 13.07%, #791281 85.2%)
+        border-radius 50%
+    

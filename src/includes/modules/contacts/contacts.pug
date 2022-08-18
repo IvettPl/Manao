@@ -1,0 +1,29 @@
+include data
+
+.contacts
+    .contacts__columns 
+        .contacts__column 
+            h2.js-animate Отправить сайт на оценку
+            
+            .contacts__desc.js-animate Рассчитать смету?  Проконсультировать по проекту?  Подписать NDA?   Легко!
+
+            .contacts__info-block.js-animate
+                .contacts__info-soc 
+                    include ./../social/social
+                ul.contacts__info
+                    each item in contactsList 
+                        li.contacts__info-item
+                            .contacts__info-item-title= item.title
+                            if(item.link_text)  
+                                a(href= item.link)= item.link_text
+                            else if( item.link_soc )
+                                each el in item.link_soc 
+                                    a(href= el.link)= el.link_text                             
+                            else
+                                p
+                                    strong= item.text   
+
+        .contacts__column#form 
+            include ./../form/form
+                         
+                        

@@ -1,0 +1,109 @@
+.about
+    padding 115px 0
+
+    @media(max-width: 960px)
+        padding 40px 0
+
+
+    &__columns  
+        display flex
+        justify-content space-between 
+
+        @media(max-width: 1224px)
+            justify-content flex-start
+
+        @media(max-width: 940px)
+            flex-direction column
+
+    &__column
+        width 50% 
+        @media(max-width: 1224px)
+            width 570px
+
+         @media(max-width: 940px)
+            width 100%
+
+        &:last-child
+            margin-left 30px
+            @media(max-width: 1224px)
+                display flex
+                align-items flex-end
+
+            @media(max-width: 940px)
+                margin 30px 0 0
+                justify-content center
+
+    &__img
+        &-list 
+            padding-top 34px
+            display flex
+            gap 30px
+
+            @media(max-width: 940px)
+                justify-content center
+
+            @media(max-width: 650px)
+                flex-direction column
+                align-items center
+
+        &-item
+            opacity 0
+            transform translateX(100%)
+            transition opacity $transition-base, transform $transition-base
+
+            &.animation
+                opacity 1
+                transform translateX(0)
+
+            @media(max-width: 1224px)
+                width 270px
+                height 196px
+                flex-shrink 0
+                border-radius 9px
+                overflow hidden
+            
+    img 
+        border-radius 9px
+        overflow hidden
+
+    h2
+        margin-bottom 33px 
+        opacity 0
+        transform translateX(-100%)
+        transition opacity $transition-base, transform $transition-base
+
+        &.animation
+            opacity 1
+            transform translateX(0)
+
+        @media(max-width: 960px)
+            margin-bottom 20px 
+
+    p 
+        margin-bottom 8px
+        line-height  24px  
+        font-size  16px   
+        opacity 0
+        transform translateX(-100%)
+        transition opacity $transition-base, transform $transition-base
+
+        &.animation
+            opacity 1
+            transform translateX(0) 
+
+    &__desc    
+        line-height  44px 
+        font-size  20px  
+        color  $dark 
+        font-weight  500 
+        opacity 0
+        transform translateX(-100%)
+        transition opacity $transition-base, transform $transition-base
+
+        &.animation
+            opacity 1
+            transform translateX(0)     
+
+        @media(max-width: 960px)
+            margin-bottom 10px
+            line-height  24px 

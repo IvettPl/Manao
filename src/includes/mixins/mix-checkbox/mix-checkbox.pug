@@ -1,0 +1,9 @@
+mixin checkbox(attr)
+    .field__checkbox-box
+        input(
+            id= attr.id,
+            class= attr.className,
+            name= attr.fieldName,
+            type="checkbox"
+        )
+        label(for= attr.id, class="label__checkbox")= attr.label

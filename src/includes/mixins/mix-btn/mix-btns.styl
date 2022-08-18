@@ -1,0 +1,50 @@
+.btn  
+    width  333px 
+    height  56px 
+    display  flex 
+    align-items  center 
+    justify-content  center 
+    line-height  16px 
+    font-size  16px 
+    font-weight  400 
+    letter-spacing  0.1em  
+    color  $btn-color-secondary
+    text-decoration  none 
+    text-transform  uppercase 
+    position  relative 
+    overflow  hidden 
+    background linear-gradient(105.96deg, #3F0F72 13.07%, #791281 85.2%)  
+    border-radius  28px 
+    box-sizing  border-box 
+    cursor  pointer  
+
+    &:after 
+        content ''
+        width calc(100% - 4px)
+        height calc(100% - 4px)
+        position absolute
+        top 2px
+        left 2px
+        opacity 0 
+        background-color $dark-blue
+        border-radius  28px 
+        transition opacity  $transition-base
+
+    &:hover
+        &:after
+            opacity 1
+
+    
+
+    span 
+        position relative
+        display block
+        z-index 1
+     
+ 
+
+    &__wrap  
+        display  flex 
+        align-items  center 
+     
+ 

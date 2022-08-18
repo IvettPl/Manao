@@ -1,0 +1,19 @@
+include data 
+
+
+each item in publishList
+    .swiper-slide
+        .publications__item
+            img(src= item.imgUrl, alt= item.title)
+
+            .publications__item-content 
+                a(href= item.link).publications__item-title= item.title
+                 
+                p= item.text
+
+                .publications__item-content--bottom
+                    .logo 
+                        img(src= item.logo, alt= item.title)
+                    
+                    .date= item.date 
+                    

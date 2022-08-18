@@ -1,0 +1,23 @@
+include data
+
+form(action="" novalidate).js-form
+    .form-area 
+        .form-area__box.js-animate
+            +inputText(checkoutName)
+
+        .form-area__box.js-animate
+            +inputText(checkoutMail)
+
+        .form-area__box.js-animate
+            +textarea(checkoutTextArea)
+
+        .form-area__box.form-area__box--group.js-animate
+            +checkbox(advice)
+            +checkbox(rate)
+            +checkbox(access)
+
+        .form-area__box.form-area__box--bottom.js-fullSize 
+            p Нажимая на кнопку, вы соглашаетесь на обработку 
+                a(href="##")  персональных данных
+
+            +btn(sendLink)

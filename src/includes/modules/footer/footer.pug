@@ -1,0 +1,20 @@
+include data
+
+.footer 
+    .center
+        include ./../contacts/contacts
+
+        .footer__bottom 
+            .footer__pay-list 
+                .swiper-wrapper 
+                    each item in payList 
+                        .swiper-slide
+                            .footer__pay-item
+                                a(href= item.link) 
+                                    img(src= item.imgUrl, alt= item.imgAlt)
+
+            .footer__info.js-fullSize 
+                p 
+                    a(href="##") Политика обработки персональных данных
+                  
+                p    Manao.Support — «Битриксоиды» до мозга костей :) 
