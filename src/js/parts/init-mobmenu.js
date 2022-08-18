@@ -3,10 +3,24 @@ let menu = document.querySelector('.main-menu');
 let body = document.querySelector('body');
 let svgBtn = document.querySelector('.ham1');
 let menuItem = document.querySelectorAll('.main-menu__list-item');
+let header = document.querySelector('.header');
+
+
+function addShadowClass() {
+    if (window.scrollY > 40) {
+      header.classList.add("shadow");
+    } else {
+      header.classList.remove("shadow");
+    }
+  }
+  window.addEventListener('scroll', addShadowClass);
+  addShadowClass();
+
 
 btn.addEventListener('click', function() {
     menu.classList.toggle('show');
     body.classList.toggle('fixed');
+    header.classList.add('shadow');
 });
 
 
@@ -30,5 +44,6 @@ menuItem.forEach(item => {
     item.addEventListener('click', function() {
         menu.classList.remove('show');
         body.classList.remove('fixed');
+        svgBtn.classList.remove('active');
     })
 });
